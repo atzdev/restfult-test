@@ -33,12 +33,12 @@ Route::group(['prefix' => 'v1'], function() {
 	]);
 
 	Route::post('/user/register', [
-		'user' => 'AuthController@store'
-	]);
+		'uses' => 'AuthController@store'
+	])->name('user.register');
 
 	Route::post('/user/signin', [
 		'uses' => 'AuthController@signin'
-	]);
+	])->name('user.signin');
 
 	
 
