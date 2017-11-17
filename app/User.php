@@ -27,10 +27,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /*public function meetings()
+    public function meetings()
     {
         return $this->belongsToMany(Meeting::class);
-    }*/
+    }
 
 
 }

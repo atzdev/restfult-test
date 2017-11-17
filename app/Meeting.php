@@ -9,10 +9,10 @@ class Meeting extends Model
     protected $fillable = ['title', 'description', 'time'];
 
 
-    /*public function users() 
+    public function users() 
     {
     	return $this->belongsToMany(User::class);
-    }*/
+    }
 
 
 
