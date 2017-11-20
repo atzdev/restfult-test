@@ -31,10 +31,17 @@ class AuthController extends Controller
         
 
         if($user->save()) {
+            $user->sigin = [
+                'href' => 'api/v1/user/signin',
+                'method' => 'POST',
+                'params' => 'email, password'
+            ];
+
             $result = [
                 'msg' => 'User created',
                 'user' => $user
             ];  
+            dd('created');
             return response()->json($result,201);             
         } else {
             $result = [
@@ -51,7 +58,7 @@ class AuthController extends Controller
 
     public function signin(Request $request)
     {
-        return 'It works - AuthController';
+        return 'It works - AuthController ja';
     }
 
 }
